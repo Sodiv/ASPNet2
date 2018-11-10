@@ -3,3 +3,6 @@
 ################################################################################
 
 /WebStore/WebStore/obj
+/WebStore/WebStore/bin/Debug/netcoreapp2.0
+/WebStore/.vs
+/.vs

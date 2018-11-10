@@ -1,26 +1,12 @@
-﻿@model IEnumerable<WebStore.Models.EmployeeView>
-@{
-    Layout = null;
+﻿@{
+    Layout = "_LayoutSideBar";
+    ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html>
+@section top{
+    @await Html.PartialAsync("Partial/_Slider")
+}
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <table>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.FirstName</td>
-                <td>@item.SurName</td>
-                <td>@item.Patronymic</td>
-                <td>@Html.ActionLink("Детали", "Details", new { id = item.Id }) </td>
-            </tr>
-        }
-    </table>
-</body>
-</html>
+@await Html.PartialAsync("Partial/_Features")
+@await Html.PartialAsync("Partial/_CategoryTab")
+@await Html.PartialAsync("Partial/_Recommended")
