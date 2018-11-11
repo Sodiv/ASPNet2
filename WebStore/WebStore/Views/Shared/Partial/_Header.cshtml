@@ -62,11 +62,11 @@
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+                            <li><a asp-action="Index" asp-controller="Employees"><i class="fa fa-user"></i> Список сотрудников</a></li>
                             <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                            <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                            <li><a asp-action="Checkout" asp-controller="Home"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                             <li><a asp-action="Cart" asp-controller="Home"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                            <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                            <li><a asp-action="Login" asp-controller="Home"><i class="fa fa-lock"></i> Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -94,21 +94,21 @@
                                 <a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a asp-action="Shop" asp-controller="Home">Products</a></li>
-                                    <li><a href="product-details.html">Product Details</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a asp-action="ProductDetails" asp-controller="Home">Product Details</a></li>
+                                    <li><a asp-action="Checkout" asp-controller="Home">Checkout</a></li>
                                     <li><a asp-action="Cart" asp-controller="Home">Cart</a></li>
-                                    <li><a href="login.html">Login</a></li>
+                                    <li><a asp-action="Login" asp-controller="Home">Login</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#">Blog<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="blog.html">Blog List</a></li>
-                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                    <li><a asp-action="Blog" asp-controller="Home">Blog List</a></li>
+                                    <li><a asp-action="BlogSingle" asp-controller="Home">Blog Single</a></li>
                                 </ul>
                             </li>
-                            <li><a href="404.html">404</a></li>
-                            <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
+                            <li><a asp-action="NotFound" asp-controller="Home">404</a></li>
+                            <li><a asp-action="ContactUs" asp-controller="Home">Contact</a></li>
                         </ul>
                     </div>
                 </div>

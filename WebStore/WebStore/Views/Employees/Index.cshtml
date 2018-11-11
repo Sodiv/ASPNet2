@@ -1,17 +1,10 @@
-﻿@model IEnumerable<WebStore.Models.EmployeeView>
+﻿@model IEnumerable<EmployeeView>
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <table>
+<div class="container">
+    <table class="table table-condensed">
         @foreach (var item in Model)
         {
             <tr>
@@ -22,5 +15,4 @@
             </tr>
         }
     </table>
-</body>
-</html>
+</div>

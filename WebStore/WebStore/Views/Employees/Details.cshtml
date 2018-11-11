@@ -1,24 +1,22 @@
-﻿@model WebStore.Models.EmployeeView
+﻿@model EmployeeView
 @{
-    Layout = null;
+    ViewBag.Title = "Details";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-    <p>@Html.ActionLink("На главную", "Index")</p>
-    <table>
+<div class="container">
+    <p>@Html.ActionLink("Назад к списку", "Index")</p>
+    <table class="table table-condensed">
         <tr>
-            <td>@Model.FirstName</td>
+            <td>Фамилия</td>
             <td>@Model.SurName</td>
+            <td>Имя</td>
+            <td>@Model.FirstName</td>
+            <td>Отчество</td>
+            <td>@Model.Patronymic</td>
+            <td>Возраст</td>
             <td>@Model.Age</td>
+            <td>Отдел</td>
             <td>@Model.Department</td>
         </tr>
     </table>
-</body>
-</html>
+</div>
