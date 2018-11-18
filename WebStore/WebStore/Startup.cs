@@ -26,6 +26,7 @@ namespace WebStore
         {
             services.AddMvc();
 
+            services.AddSingleton<IProductData, InMemoryProductData>();
             services.AddSingleton<IEmployeesData, InMemoryEmployeesData>();
         }
 
