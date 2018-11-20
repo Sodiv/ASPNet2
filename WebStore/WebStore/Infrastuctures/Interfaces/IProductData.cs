@@ -13,5 +13,7 @@ namespace WebStore.Infrastuctures.Interfaces
         IEnumerable<Brand> GetBrands();
 
         IEnumerable<Product> GetProducts(ProductFilter filter);
+
+        int GetBrandProductCount(int brandId);
     }
 }
