@@ -46,7 +46,7 @@ namespace WebStore
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
                 options.Lockout.MaxFailedAccessAttempts = 10;
                 options.Lockout.AllowedForNewUsers = true;
-                //options.User.RequireUniqueEmail = true;
+                options.User.RequireUniqueEmail = true;
             });
 
             services.ConfigureApplicationCookie(options =>
@@ -58,6 +58,9 @@ namespace WebStore
                 options.AccessDeniedPath = "/Account/AccessDenied";
                 options.SlidingExpiration = true;
             });
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddTransient<ICartService, CookieCartService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,7 +78,10 @@ namespace WebStore
             app.UseAuthentication();
 
             app.UseMvc(routes =>
-            {
+            {                
+                routes.MapRoute(
+                    name: "areas",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

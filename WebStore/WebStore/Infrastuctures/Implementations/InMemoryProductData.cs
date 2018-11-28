@@ -406,6 +406,11 @@ namespace WebStore.Infrastuctures.Implementations
             return _brands;
         }
 
+        public Product GetProductById(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Product> GetProducts(ProductFilter filter)
         {
             var products = _products;
