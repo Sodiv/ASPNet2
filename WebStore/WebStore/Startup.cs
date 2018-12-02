@@ -32,6 +32,7 @@ namespace WebStore
             services.AddMvc();
 
             services.AddTransient<IProductData, SqlProductData>();
+            services.AddTransient<IOrdersService, SqlOrdersService>();
             services.AddSingleton<IEmployeesData, InMemoryEmployeesData>();
 
             services.AddDbContext<WebStoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
