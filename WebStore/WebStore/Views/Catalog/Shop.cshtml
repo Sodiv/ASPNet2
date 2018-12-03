@@ -1,0 +1,21 @@
+﻿@model CatalogViewModel
+@{ 
+    Layout = "_LayoutSideBar";
+    ViewData["Title"] = "Shop";
+}
+
+@section top{ 
+    @await Html.PartialAsync("Partial/_Advertisement")
+}
+
+<section>
+        <div class="col-sm-9 padding-right">
+            @await Html.PartialAsync("Partial/_ProductItems", Model.Products)
+            <ul class="pagination">
+                <li class="active"><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">&raquo;</a></li>
+            </ul>
+        </div>
+</section>
