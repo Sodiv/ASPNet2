@@ -14,6 +14,8 @@ using WebStore.Domain.Entities;
 using WebStore.Infrastuctures.Implementations;
 using WebStore.Infrastuctures.Interfaces;
 using WebStore.Infrastuctures.Sql;
+using WebStore.Interfaces.Clients;
+using WebStore.Services;
 
 namespace WebStore
 {
@@ -62,6 +64,7 @@ namespace WebStore
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<ICartService, CookieCartService>();
+            services.AddTransient<IValueService, ValuesClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
