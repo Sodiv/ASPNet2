@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WebStore.Domain.Dto.Order;
 using WebStore.Infrastuctures.Interfaces;
 using WebStore.Models.Order;
 
@@ -62,8 +63,7 @@ namespace WebStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                var orderResult = _ordersService.CreateOrder(model, _cartService.TransformCart(),
-                    User.Identity.Name);
+                var orderResult = _ordersService.CreateOrder(new CreateOrderModel(), User.Identity.Name);
                 _cartService.RemoveAll();
                 return RedirectToAction("OrderConfirmed", new { id = orderResult.Id });
             }
