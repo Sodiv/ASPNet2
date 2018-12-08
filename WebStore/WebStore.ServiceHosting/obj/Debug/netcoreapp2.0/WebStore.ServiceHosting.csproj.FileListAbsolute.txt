@@ -9,3 +9,14 @@ E:\ASPNet2\WebStore\WebStore.ServiceHosting\obj\Debug\netcoreapp2.0\WebStore.Ser
 E:\ASPNet2\WebStore\WebStore.ServiceHosting\obj\Debug\netcoreapp2.0\WebStore.ServiceHosting.AssemblyInfo.cs
 E:\ASPNet2\WebStore\WebStore.ServiceHosting\obj\Debug\netcoreapp2.0\WebStore.ServiceHosting.dll
 E:\ASPNet2\WebStore\WebStore.ServiceHosting\obj\Debug\netcoreapp2.0\WebStore.ServiceHosting.pdb
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.Clients.dll
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.DAL.dll
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.Domain.dll
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.Interfaces.dll
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.Services.dll
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.DAL.pdb
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.Domain.pdb
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.Interfaces.pdb
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.Services.pdb
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.Clients.pdb
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\obj\Debug\netcoreapp2.0\WebStore.ServiceHosting.csproj.CopyComplete

@@ -14,7 +14,9 @@ namespace WebStore.Infrastuctures.Interfaces
         /// <returns></returns>
         IEnumerable<EmployeeView> GetAll();
         EmployeeView GetById(int id);
+        EmployeeView UpdateEmployee(int id, EmployeeView entity);
         void AddNew(EmployeeView model);
         void Delete(int id);
+        void Commit();
     }
 }

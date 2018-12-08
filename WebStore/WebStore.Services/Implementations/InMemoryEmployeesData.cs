@@ -47,6 +47,7 @@ namespace WebStore.Infrastuctures.Implementations
 
         public void AddNew(EmployeeView model)
         {
+            if (model == null) throw new ArgumentNullException(nameof(model));
             model.Id = _employees.Max(e => e.Id) + 1;
             _employees.Add(model);
         }
@@ -67,7 +68,27 @@ namespace WebStore.Infrastuctures.Implementations
 
         public EmployeeView GetById(int id)
         {
-            return _employees.FirstOrDefault(e => e.Id == id);
+            return _employees.FirstOrDefault(e => e.Id.Equals(id));
+        }
+
+        public EmployeeView UpdateEmployee(int id, EmployeeView entity)
+        {
+            if (entity == null) throw new ArgumentNullException(nameof(entity));
+
+            var employee = _employees.FirstOrDefault(e => e.Id.Equals(id));
+            if (employee == null) throw new InvalidOperationException("Employee not exits");
+            employee.Age = entity.Age;
+            employee.FirstName = entity.FirstName;
+            employee.Patronymic = entity.Patronymic;
+            employee.SurName = entity.SurName;
+            employee.Department = entity.Department;
+
+            return employee;
+        }
+
+        public void Commit()
+        {
+
         }
     }
 }

@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebStore.Domain.Dto;
 using WebStore.Domain.Entities;
 
 namespace WebStore.Infrastuctures.Interfaces
 {
     public interface IProductData
     {
-        IEnumerable<Section> GetSections();
+        IEnumerable<SectionDto> GetSections();
 
-        IEnumerable<Brand> GetBrands();
+        IEnumerable<BrandDto> GetBrands();
 
-        IEnumerable<Product> GetProducts(ProductFilter filter);
+        IEnumerable<ProductDto> GetProducts(ProductFilter filter);
 
         int GetBrandProductCount(int brandId);
 
-        Product GetProductById(int id);
+        ProductDto GetProductById(int id);
     }
 }

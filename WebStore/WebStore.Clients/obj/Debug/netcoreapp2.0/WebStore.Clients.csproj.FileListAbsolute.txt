@@ -7,3 +7,8 @@ E:\ASPNet2\WebStore\WebStore.Clients\obj\Debug\netcoreapp2.0\WebStore.Clients.cs
 E:\ASPNet2\WebStore\WebStore.Clients\bin\Debug\netcoreapp2.0\WebStore.Clients.pdb
 E:\ASPNet2\WebStore\WebStore.Clients\obj\Debug\netcoreapp2.0\WebStore.Clients.dll
 E:\ASPNet2\WebStore\WebStore.Clients\obj\Debug\netcoreapp2.0\WebStore.Clients.pdb
+E:\ASPNet2\WebStore\WebStore.Clients\bin\Debug\netcoreapp2.0\WebStore.Domain.dll
+E:\ASPNet2\WebStore\WebStore.Clients\bin\Debug\netcoreapp2.0\WebStore.Interfaces.dll
+E:\ASPNet2\WebStore\WebStore.Clients\bin\Debug\netcoreapp2.0\WebStore.Interfaces.pdb
+E:\ASPNet2\WebStore\WebStore.Clients\bin\Debug\netcoreapp2.0\WebStore.Domain.pdb
+E:\ASPNet2\WebStore\WebStore.Clients\obj\Debug\netcoreapp2.0\WebStore.Clients.csproj.CopyComplete

@@ -702,7 +702,8 @@
       "WebStore.Clients/1.0.0": {
         "dependencies": {
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
-          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0"
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "WebStore.Interfaces": "1.0.0"
         },
         "runtime": {
           "WebStore.Clients.dll": {}
