@@ -4045,11 +4045,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ASPNet1\\WebStore\\WebStore.Domain\\WebStore.Domain.csproj",
+      "projectUniqueName": "E:\\ASPNet2\\WebStore\\WebStore.Domain\\WebStore.Domain.csproj",
       "projectName": "WebStore.Domain",
-      "projectPath": "E:\\ASPNet1\\WebStore\\WebStore.Domain\\WebStore.Domain.csproj",
+      "projectPath": "E:\\ASPNet2\\WebStore\\WebStore.Domain\\WebStore.Domain.csproj",
       "packagesPath": "C:\\Users\\Созонов\\.nuget\\packages\\",
-      "outputPath": "E:\\ASPNet1\\WebStore\\WebStore.Domain\\obj\\",
+      "outputPath": "E:\\ASPNet2\\WebStore\\WebStore.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
