@@ -1,0 +1,319 @@
+2018-12-16 12:28:58,578 [9] ?     - Request starting HTTP/1.1 DEBUG http://localhost:53971/  0
+
+2018-12-16 12:28:58,578 [8] ?     - Request starting HTTP/1.1 GET http://localhost:53971/  
+
+2018-12-16 12:28:58,654 [9] ?     - Request finished in 146.5113ms 200 
+
+2018-12-16 12:28:58,991 [8] ?     - Executing action method WebStore.Controllers.HomeController.Index (WebStore) with arguments ((null)) - ModelState is Valid
+
+2018-12-16 12:29:02,801 [9] ?     - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+
+2018-12-16 12:29:06,252 [18] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product3.jpg  
+
+2018-12-16 12:29:06,265 [9] ?     - Executed action WebStore.Controllers.HomeController.Index (WebStore) in 7266.1745ms
+
+2018-12-16 12:29:06,289 [18] ?     - Request finished in 13.4613ms 404 
+
+2018-12-16 12:29:06,295 [11] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product2.jpg  
+
+2018-12-16 12:29:06,331 [10] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product1.jpg  
+
+2018-12-16 12:29:06,341 [11] ?     - Request finished in 68.8367ms 404 
+
+2018-12-16 12:29:06,356 [11] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product4.jpg  
+
+2018-12-16 12:29:06,364 [18] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product6.jpg  
+
+2018-12-16 12:29:06,382 [10] ?     - Request finished in 112.3297ms 404 
+
+2018-12-16 12:29:06,410 [18] ?     - Request finished in 60.0509ms 404 
+
+2018-12-16 12:29:06,421 [9] ?     - Request finished in 7784.5931ms 200 text/html; charset=utf-8
+
+2018-12-16 12:29:06,425 [11] ?     - Request finished in 10.5428ms 404 
+
+2018-12-16 12:29:06,451 [10] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product5.jpg  
+
+2018-12-16 12:29:06,463 [10] ?     - Request finished in 67.5466ms 404 
+
+2018-12-16 12:33:19,095 [8] ?     - Request starting HTTP/1.1 DEBUG http://localhost:53971/  0
+
+2018-12-16 12:33:19,097 [9] ?     - Request starting HTTP/1.1 GET http://localhost:53971/  
+
+2018-12-16 12:33:19,202 [8] ?     - Request finished in 154.5907ms 200 
+
+2018-12-16 12:33:19,607 [9] ?     - Executing action method WebStore.Controllers.HomeController.Index (WebStore) with arguments ((null)) - ModelState is Valid
+
+2018-12-16 12:33:23,882 [8] ?     - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+
+2018-12-16 12:33:27,456 [9] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product1.jpg  
+
+2018-12-16 12:33:27,462 [8] ?     - Executed action WebStore.Controllers.HomeController.Index (WebStore) in 7874.7172ms
+
+2018-12-16 12:33:27,489 [11] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product2.jpg  
+
+2018-12-16 12:33:27,505 [11] ?     - Request finished in 15.4763ms 404 
+
+2018-12-16 12:33:27,539 [11] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product6.jpg  
+
+2018-12-16 12:33:27,545 [10] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product4.jpg  
+
+2018-12-16 12:33:27,553 [9] ?     - Request finished in 31.9585ms 404 
+
+2018-12-16 12:33:27,571 [10] ?     - Request finished in 62.445ms 404 
+
+2018-12-16 12:33:27,596 [8] ?     - Request finished in 8468.5047ms 200 text/html; charset=utf-8
+
+2018-12-16 12:33:27,597 [11] ?     - Request finished in 11.5102ms 404 
+
+2018-12-16 12:33:27,649 [9] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product3.jpg  
+
+2018-12-16 12:33:27,671 [9] ?     - Request finished in 14.6416ms 404 
+
+2018-12-16 12:33:27,680 [10] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product5.jpg  
+
+2018-12-16 12:33:27,701 [10] ?     - Request finished in 90.8914ms 404 
+
+2018-12-16 12:33:55,828 [9] ?     - Request starting HTTP/1.1 DEBUG http://localhost:53971/  0
+
+2018-12-16 12:33:55,828 [8] ?     - Request starting HTTP/1.1 GET http://localhost:53971/  
+
+2018-12-16 12:33:55,891 [9] ?     - Request finished in 109.0025ms 200 
+
+2018-12-16 12:33:56,245 [8] ?     - Executing action method WebStore.Controllers.HomeController.Index (WebStore) with arguments ((null)) - ModelState is Valid
+
+2018-12-16 12:34:00,092 [10] ?     - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+
+2018-12-16 12:34:03,662 [10] ?     - Executed action WebStore.Controllers.HomeController.Index (WebStore) in 7420.4887ms
+
+2018-12-16 12:34:03,689 [11] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product3.jpg  
+
+2018-12-16 12:34:03,699 [20] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product4.jpg  
+
+2018-12-16 12:34:03,707 [19] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product2.jpg  
+
+2018-12-16 12:34:03,755 [10] ?     - Request finished in 7899.7906ms 200 text/html; charset=utf-8
+
+2018-12-16 12:34:03,760 [9] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product5.jpg  
+
+2018-12-16 12:34:03,765 [20] ?     - Request finished in 46.3517ms 404 
+
+2018-12-16 12:34:03,775 [9] ?     - Request finished in 93.9596ms 404 
+
+2018-12-16 12:34:03,781 [19] ?     - Request finished in 49.5146ms 404 
+
+2018-12-16 12:34:03,803 [8] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product1.jpg  
+
+2018-12-16 12:34:03,816 [8] ?     - Request finished in 155.8116ms 404 
+
+2018-12-16 12:34:03,821 [11] ?     - Request finished in 69.6842ms 404 
+
+2018-12-16 12:34:03,851 [10] ?     - Request starting HTTP/1.1 GET http://localhost:53971/images/home/product6.jpg  
+
+2018-12-16 12:34:03,859 [10] ?     - Request finished in 31.1897ms 404 
+
+2018-12-16 12:53:52,924 [9] ?     - Operation is not valid due to the current state of the object.
+
+System.InvalidOperationException: Operation is not valid due to the current state of the object.
+   at WebStore.Controllers.HomeController.<Index>d__2.MoveNext() in E:\ASPNet2\WebStore\WebStore\Controllers\HomeController.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+2018-12-16 12:53:53,112 [9] ?     - An unhandled exception has occurred while executing the request
+
+2018-12-16 12:58:54,326 [8] ?     - Новая ошибка!
+
+System.InvalidOperationException: Новая ошибка!
+   at WebStore.Controllers.HomeController.<Index>d__2.MoveNext() in E:\ASPNet2\WebStore\WebStore\Controllers\HomeController.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+2018-12-16 12:58:54,550 [8] ?     - An unhandled exception has occurred while executing the request
+
+2018-12-16 13:00:06,348 [9] ?     - Новая ошибка!
+
+System.InvalidOperationException: Новая ошибка!
+   at WebStore.Controllers.HomeController.<Index>d__2.MoveNext() in E:\ASPNet2\WebStore\WebStore\Controllers\HomeController.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+2018-12-16 13:00:06,551 [9] ?     - An unhandled exception has occurred while executing the request
+
+2018-12-16 13:04:32,239 [8] ?     - Новая ошибка!
+
+System.InvalidOperationException: Новая ошибка!
+   at WebStore.Controllers.HomeController.<Index>d__2.MoveNext() in E:\ASPNet2\WebStore\WebStore\Controllers\HomeController.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+2018-12-16 13:04:32,445 [8] ?     - An unhandled exception has occurred: Новая ошибка!
+
+2018-12-16 13:04:40,859 [11] ?     - Новая ошибка!
+
+System.InvalidOperationException: Новая ошибка!
+   at WebStore.Controllers.HomeController.<Index>d__2.MoveNext() in E:\ASPNet2\WebStore\WebStore\Controllers\HomeController.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+2018-12-16 13:04:40,970 [11] ?     - An unhandled exception has occurred: Новая ошибка!
+

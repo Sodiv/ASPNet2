@@ -9,11 +9,21 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using WebStore.Clients.Services.Employees;
+using WebStore.Clients.Services.Orders;
+using WebStore.Clients.Services.Products;
+using WebStore.Clients.Services.Users;
 using WebStore.DAL.Context;
 using WebStore.Domain.Entities;
 using WebStore.Infrastuctures.Implementations;
 using WebStore.Infrastuctures.Interfaces;
 using WebStore.Infrastuctures.Sql;
+using WebStore.Interfaces;
+using WebStore.Interfaces.Clients;
+using WebStore.Logger;
+using WebStore.Middleware;
+using WebStore.Services;
 
 namespace WebStore
 {
@@ -31,14 +41,28 @@ namespace WebStore
         {
             services.AddMvc();
 
-            services.AddTransient<IProductData, SqlProductData>();
-            services.AddTransient<IOrdersService, SqlOrdersService>();
-            services.AddSingleton<IEmployeesData, InMemoryEmployeesData>();
+            services.AddTransient<IProductData, ProductsClient>();
+            services.AddTransient<IOrdersService, OrdersClient>();
+            services.AddSingleton<IEmployeesData, EmployeesClient>();
+            services.AddTransient<IUsersClient, UsersClient>();
 
-            services.AddDbContext<WebStoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddTransient<IUserStoreClient, UserStoreClient>();
+
+            services.AddTransient<IUserStore<User>, UsersClient>();
+
+            services.AddTransient<IUserRoleStore<User>, UserRoleClient>();
+            services.AddTransient<IUserClaimStore<User>, UsersClient>();
+            services.AddTransient<IUserPasswordStore<User>, UsersClient>();
+            services.AddTransient<IUserTwoFactorStore<User>, UsersClient>();
+            services.AddTransient<IUserEmailStore<User>, UsersClient>();
+            services.AddTransient<IUserPhoneNumberStore<User>, UsersClient>();
+            services.AddTransient<IUserLoginStore<User>, UsersClient>();
+            services.AddTransient<IUserLockoutStore<User>, UsersClient>();
+
+            services.AddTransient<IRoleStore<IdentityRole>, RolesClient>();
+
 
             services.AddIdentity<User, IdentityRole>()
-                .AddEntityFrameworkStores<WebStoreContext>()
                 .AddDefaultTokenProviders();
 
             services.Configure<IdentityOptions>(options =>
@@ -62,21 +86,29 @@ namespace WebStore
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<ICartService, CookieCartService>();
+            services.AddTransient<IValueService, ValuesClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider svp, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddLog4Net();
+
             if (env.IsDevelopment())
-            {
                 app.UseDeveloperExceptionPage();
-            }
+            else
+                app.UseExceptionHandler("/Home/Error");
+            
 
             app.UseStaticFiles();
 
             app.UseWelcomePage("/welcome");
 
             app.UseAuthentication();
+
+            app.UseStatusCodePagesWithRedirects("~/home/errorstatus/{0}");
+
+            app.UseMiddleware(typeof(ErrorHandlingMiddleware));
 
             app.UseMvc(routes =>
             {                
