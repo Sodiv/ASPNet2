@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using WebStore.Clients.Services.Employees;
 using WebStore.Clients.Services.Orders;
 using WebStore.Clients.Services.Products;
@@ -20,6 +21,8 @@ using WebStore.Infrastuctures.Interfaces;
 using WebStore.Infrastuctures.Sql;
 using WebStore.Interfaces;
 using WebStore.Interfaces.Clients;
+using WebStore.Logger;
+using WebStore.Middleware;
 using WebStore.Services;
 
 namespace WebStore
@@ -56,7 +59,8 @@ namespace WebStore
             services.AddTransient<IUserLoginStore<User>, UsersClient>();
             services.AddTransient<IUserLockoutStore<User>, UsersClient>();
 
-            services.AddTransient<IRoleStore<IdentityRole>, RolesClient>();
+            services.AddTransient<IRoleStore<IdentityRole>, RolesClient>();
+
 
             services.AddIdentity<User, IdentityRole>()
                 .AddDefaultTokenProviders();
@@ -86,18 +90,25 @@ namespace WebStore
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider svp, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddLog4Net();
+
             if (env.IsDevelopment())
-            {
                 app.UseDeveloperExceptionPage();
-            }
+            else
+                app.UseExceptionHandler("/Home/Error");
+            
 
             app.UseStaticFiles();
 
             app.UseWelcomePage("/welcome");
 
             app.UseAuthentication();
+
+            app.UseStatusCodePagesWithRedirects("~/home/errorstatus/{0}");
+
+            app.UseMiddleware(typeof(ErrorHandlingMiddleware));
 
             app.UseMvc(routes =>
             {                

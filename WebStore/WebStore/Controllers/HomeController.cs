@@ -18,6 +18,7 @@ namespace WebStore.Controllers
 
         public async Task<IActionResult> Index()
         {
+            //throw new InvalidOperationException("Новая ошибка!");
             var values = await _valueService.GetAsync();
             return View(values);
         }
@@ -45,6 +46,13 @@ namespace WebStore.Controllers
         public IActionResult BlogSingle()
         {
             return View();
+        }
+
+        public IActionResult ErrorStatus(string id)
+        {
+            if (id == "404")
+                return RedirectToAction("NotFound");
+            return Content($"Статусный код ошибки: {id}");
         }
 
         public IActionResult NotFound()

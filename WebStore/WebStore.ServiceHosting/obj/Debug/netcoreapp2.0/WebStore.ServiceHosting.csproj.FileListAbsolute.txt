@@ -20,3 +20,6 @@ E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.Int
 E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.Services.pdb
 E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.Clients.pdb
 E:\ASPNet2\WebStore\WebStore.ServiceHosting\obj\Debug\netcoreapp2.0\WebStore.ServiceHosting.csproj.CopyComplete
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\log4net.config
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.Logger.dll
+E:\ASPNet2\WebStore\WebStore.ServiceHosting\bin\Debug\netcoreapp2.0\WebStore.Logger.pdb
