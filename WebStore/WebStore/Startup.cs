@@ -24,6 +24,7 @@ using WebStore.Interfaces.Clients;
 using WebStore.Logger;
 using WebStore.Middleware;
 using WebStore.Services;
+using WebStore.Services.Implementations;
 
 namespace WebStore
 {
@@ -85,7 +86,8 @@ namespace WebStore
             });
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddTransient<ICartService, CookieCartService>();
+            services.AddTransient<ICartStore, CookiesCartStore>();
+            services.AddTransient<ICartService, CartService>();
             services.AddTransient<IValueService, ValuesClient>();
         }
 
