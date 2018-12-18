@@ -1,0 +1,9 @@
+E:\ASPNet2\WebStore\WebStore.Logger\bin\Debug\netcoreapp2.0\WebStore.Logger.deps.json
+E:\ASPNet2\WebStore\WebStore.Logger\bin\Debug\netcoreapp2.0\WebStore.Logger.dll
+E:\ASPNet2\WebStore\WebStore.Logger\obj\Debug\netcoreapp2.0\WebStore.Logger.csproj.CoreCompileInputs.cache
+E:\ASPNet2\WebStore\WebStore.Logger\obj\Debug\netcoreapp2.0\WebStore.Logger.AssemblyInfoInputs.cache
+E:\ASPNet2\WebStore\WebStore.Logger\obj\Debug\netcoreapp2.0\WebStore.Logger.AssemblyInfo.cs
+E:\ASPNet2\WebStore\WebStore.Logger\bin\Debug\netcoreapp2.0\WebStore.Logger.pdb
+E:\ASPNet2\WebStore\WebStore.Logger\obj\Debug\netcoreapp2.0\WebStore.Logger.csprojAssemblyReference.cache
+E:\ASPNet2\WebStore\WebStore.Logger\obj\Debug\netcoreapp2.0\WebStore.Logger.dll
+E:\ASPNet2\WebStore\WebStore.Logger\obj\Debug\netcoreapp2.0\WebStore.Logger.pdb

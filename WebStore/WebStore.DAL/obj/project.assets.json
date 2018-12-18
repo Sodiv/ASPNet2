@@ -4129,11 +4129,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ASPNet1\\WebStore\\WebStore.DAL\\WebStore.DAL.csproj",
+      "projectUniqueName": "E:\\ASPNet2\\WebStore\\WebStore.DAL\\WebStore.DAL.csproj",
       "projectName": "WebStore.DAL",
-      "projectPath": "E:\\ASPNet1\\WebStore\\WebStore.DAL\\WebStore.DAL.csproj",
+      "projectPath": "E:\\ASPNet2\\WebStore\\WebStore.DAL\\WebStore.DAL.csproj",
       "packagesPath": "C:\\Users\\Созонов\\.nuget\\packages\\",
-      "outputPath": "E:\\ASPNet1\\WebStore\\WebStore.DAL\\obj\\",
+      "outputPath": "E:\\ASPNet2\\WebStore\\WebStore.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4152,8 +4152,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\ASPNet1\\WebStore\\WebStore.Domain\\WebStore.Domain.csproj": {
-              "projectPath": "E:\\ASPNet1\\WebStore\\WebStore.Domain\\WebStore.Domain.csproj"
+            "E:\\ASPNet2\\WebStore\\WebStore.Domain\\WebStore.Domain.csproj": {
+              "projectPath": "E:\\ASPNet2\\WebStore\\WebStore.Domain\\WebStore.Domain.csproj"
             }
           }
         }
