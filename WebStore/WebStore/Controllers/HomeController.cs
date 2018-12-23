@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WebStore.Interfaces.Clients;
 
 namespace WebStore.Controllers
 {
     public class HomeController : Controller
-    {        
-        public IActionResult Index()
+    {
+        private readonly IValueService _valueService;
+
+        public HomeController(IValueService valueService)
         {
-            return View();
+            _valueService = valueService;
         }
 
+        public async Task<IActionResult> Index()
+        {
+            //throw new InvalidOperationException("Новая ошибка!");
+            var values = await _valueService.GetAsync();
+            return View(values);
+        }
         
-
         public IActionResult Checkout()
         {
             return View();
@@ -38,6 +46,13 @@ namespace WebStore.Controllers
         public IActionResult BlogSingle()
         {
             return View();
+        }
+
+        public IActionResult ErrorStatus(string id)
+        {
+            if (id == "404")
+                return RedirectToAction("NotFound");
+            return Content($"Статусный код ошибки: {id}");
         }
 
         public IActionResult NotFound()
