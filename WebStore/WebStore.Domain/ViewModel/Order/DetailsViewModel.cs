@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebStore.Models.Cart;
+using WebStore.Domain.ViewModel.Cart;
 
-namespace WebStore.Models.Order
+namespace WebStore.Domain.ViewModel.Order
 {
     public class DetailsViewModel
     {

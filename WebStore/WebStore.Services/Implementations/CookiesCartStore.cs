@@ -2,9 +2,8 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using WebStore.Domain.ViewModel.Cart;
 using WebStore.Interfaces;
-using WebStore.Models.Cart;
 
 namespace WebStore.Services.Implementations
 {

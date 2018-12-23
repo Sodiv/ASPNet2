@@ -9,7 +9,7 @@ using WebStore.Controllers;
 using WebStore.Domain.Dto;
 using WebStore.Domain.Entities;
 using WebStore.Infrastuctures.Interfaces;
-using WebStore.Models;
+using WebStore.Domain.ViewModel;
 
 namespace WebStore.Tests
 {

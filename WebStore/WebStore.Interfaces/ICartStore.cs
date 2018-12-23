@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using WebStore.Models.Cart;
+﻿using WebStore.Domain.ViewModel.Cart;
 
 namespace WebStore.Interfaces
 {

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using WebStore.Models.Order;
+﻿using System.Collections.Generic;
+using WebStore.Domain.ViewModel.Order;
 
 namespace WebStore.Domain.Dto.Order
 {

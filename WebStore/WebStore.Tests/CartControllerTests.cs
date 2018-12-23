@@ -9,9 +9,9 @@ using System.Text;
 using WebStore.Controllers;
 using WebStore.Domain.Dto.Order;
 using WebStore.Infrastuctures.Interfaces;
-using WebStore.Models;
-using WebStore.Models.Cart;
-using WebStore.Models.Order;
+using WebStore.Domain.ViewModel;
+using WebStore.Domain.ViewModel.Cart;
+using WebStore.Domain.ViewModel.Order;
 using Assert = Xunit.Assert;
 
 namespace WebStore.Tests

@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebStore.Domain.ViewModel;
 using WebStore.Infrastuctures.Interfaces;
-using WebStore.Models;
 
 namespace WebStore.ViewComponents
 {
@@ -17,10 +16,12 @@ namespace WebStore.ViewComponents
             _productData = productData;
         }
 
-        public IViewComponentResult Invoke()
+        public async Task<IViewComponentResult> InvokeAsync(string brandId)
         {
+            int.TryParse(brandId, out var brandIdResult);
+
             var brands = GetBrands();
-            return View(brands);
+            return View(new BrandCompleteViewModel() { Brands = brands, CurrentBrandId = brandIdResult });
         }
 
         private IEnumerable<BrandViewModel> GetBrands()
@@ -31,7 +32,7 @@ namespace WebStore.ViewComponents
                 Id = b.Id,
                 Name = b.Name,
                 Order = b.Order,
-                ProductsCount = _productData.GetBrandProductCount(b.Id)
+                ProductsCount = 0
             }).OrderBy(b => b.Order).ToList();
         }
     }

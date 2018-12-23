@@ -1,14 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using WebStore.Domain.Entities;
+using WebStore.Domain.ViewModel;
+using WebStore.Domain.ViewModel.Cart;
 using WebStore.Infrastuctures.Interfaces;
 using WebStore.Interfaces;
-using WebStore.Models;
-using WebStore.Models.Cart;
 
 namespace WebStore.Infrastuctures.Implementations
 {

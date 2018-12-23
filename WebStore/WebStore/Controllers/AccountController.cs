@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using WebStore.Domain;
 using WebStore.Domain.Entities;
-using WebStore.Models.Account;
+using WebStore.Domain.ViewModel.Account;
 
 namespace WebStore.Controllers
 {

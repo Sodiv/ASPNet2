@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using WebStore.Domain.ViewModel;
 using WebStore.Infrastuctures.Interfaces;
-using WebStore.Models;
 
 namespace WebStore.Infrastuctures.Implementations
 {

@@ -3,13 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using WebStore.DAL.Context;
 using WebStore.Domain.Dto.Order;
 using WebStore.Domain.Entities;
 using WebStore.Infrastuctures.Interfaces;
-using WebStore.Models.Cart;
-using WebStore.Models.Order;
 
 namespace WebStore.Infrastuctures.Sql
 {

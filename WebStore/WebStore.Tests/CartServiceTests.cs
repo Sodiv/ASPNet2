@@ -9,8 +9,8 @@ using WebStore.Domain.Entities;
 using WebStore.Infrastuctures.Implementations;
 using WebStore.Infrastuctures.Interfaces;
 using WebStore.Interfaces;
-using WebStore.Models;
-using WebStore.Models.Cart;
+using WebStore.Domain.ViewModel;
+using WebStore.Domain.ViewModel.Cart;
 using Assert = Xunit.Assert;
 
 namespace WebStore.Tests
