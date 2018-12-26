@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Text;
 using WebStore.Clients.Base;
 using WebStore.Domain.Dto;
+using WebStore.Domain.Dto.Product;
 using WebStore.Domain.Entities;
 using WebStore.Infrastuctures.Interfaces;
 
@@ -33,11 +34,11 @@ namespace WebStore.Clients.Services.Products
             return result;
         }
 
-        public IEnumerable<ProductDto> GetProducts(ProductFilter filter)
+        public PagedProductDto GetProducts(ProductFilter filter)
         {
             var url = $"{ServiceAddress}";
             var response = Post(url, filter);
-            var result = response.Content.ReadAsAsync<IEnumerable<ProductDto>>().Result;
+            var result = response.Content.ReadAsAsync<PagedProductDto>().Result;
             return result;
         }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebStore.Domain.Dto;
+using WebStore.Domain.Dto.Product;
 using WebStore.Domain.Entities;
 
 namespace WebStore.Infrastuctures.Interfaces
@@ -17,7 +18,7 @@ namespace WebStore.Infrastuctures.Interfaces
 
         Brand GetBrandById(int id);
 
-        IEnumerable<ProductDto> GetProducts(ProductFilter filter);
+        PagedProductDto GetProducts(ProductFilter filter);
 
         int GetBrandProductCount(int brandId);
 

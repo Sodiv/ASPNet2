@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.Domain.Dto;
+using WebStore.Domain.Dto.Product;
 using WebStore.Domain.Entities;
 using WebStore.Infrastuctures.Interfaces;
 
@@ -34,7 +35,7 @@ namespace WebStore.ServiceHosting.Controllers
         }
 
         [HttpPost]
-        public IEnumerable<ProductDto> GetProducts([FromBody]ProductFilter filter)
+        public PagedProductDto GetProducts([FromBody]ProductFilter filter)
         {
             return _productData.GetProducts(filter);
         }

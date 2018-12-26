@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using WebStore.DAL.Context;
 using WebStore.Domain.Dto;
+using WebStore.Domain.Dto.Product;
 using WebStore.Domain.Entities;
 using WebStore.Infrastuctures.Interfaces;
 
@@ -56,7 +57,7 @@ namespace WebStore.Infrastuctures.Sql
             return dto;
         }
 
-        public IEnumerable<ProductDto> GetProducts(ProductFilter filter)
+        public PagedProductDto GetProducts(ProductFilter filter)
         {
             var query = _context.Products.Include("Brand").Include("Section").AsQueryable();
 
@@ -65,16 +66,43 @@ namespace WebStore.Infrastuctures.Sql
             if (filter.SectionId.HasValue)
                 query = query.Where(c => c.SectionId.Equals(filter.SectionId.Value));
 
-            return query.Select(p => new ProductDto()
+            var model = new PagedProductDto
             {
-                Id = p.Id,
-                Name = p.Name,
-                Order = p.Order,
-                Price = p.Price,
-                ImageUrl = p.ImageUrl,
-                Brand = p.BrandId.HasValue ? new BrandDto() { Id = p.Brand.Id, Name = p.Brand.Name } : null,
-                Section = new SectionDto() { Id = p.SectionId, Name = p.Section.Name }
-            }).ToList();
+                TotalCount = query.Count()
+            };
+
+            if (filter.PageSize.HasValue)
+            {
+                model.Products = query.OrderBy(c => c.Order).Skip((filter.Page - 1) * filter.PageSize.Value).Take(filter.PageSize.Value)
+                    .Select(p =>
+                        new ProductDto
+                        {
+                            Id = p.Id,
+                            Name = p.Name,
+                            Order = p.Order,
+                            Price = p.Price,
+                            ImageUrl = p.ImageUrl,
+                            Brand = p.BrandId.HasValue ? new BrandDto() { Id = p.Brand.Id, Name = p.Brand.Name } : null,
+                            Section = new SectionDto() { Id = p.SectionId, Name = p.Section.Name }
+                        }).ToList();
+            }
+            else
+            {
+                model.Products = query.OrderBy(c => c.Order).Select(p =>
+                    new ProductDto
+                    {
+                        Id = p.Id,
+                        Name = p.Name,
+                        Order = p.Order,
+                        Price = p.Price,
+                        ImageUrl = p.ImageUrl,
+                        Brand = p.BrandId.HasValue ? new BrandDto() { Id = p.Brand.Id, Name = p.Brand.Name } : null,
+                        Section = new SectionDto() { Id = p.SectionId, Name = p.Section.Name }
+                    }).ToList();
+            }
+
+            return model;
+
         }
 
         public IEnumerable<SectionDto> GetSections()

@@ -14,7 +14,8 @@
     "inputFiles": [
       "wwwroot/js/price-range.js",
       "wwwroot/js/squery.prettyPhoto.js",
-      "wwwroot/js/main.js"
+      "wwwroot/js/main.js",
+      "wwwroot/js/cart/cartLogic.js"
     ],
     "minify": {
       "enabled": true,
