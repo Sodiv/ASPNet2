@@ -1,0 +1,20 @@
+2018-12-26 20:09:26,919 [11] ?     - The Include operation for navigation '[<generated>_2].Brand' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-12-26 20:09:26,942 [11] ?     - The Include operation for navigation '[<generated>_2].Section' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-12-26 20:09:31,050 [11] ?     - The Include operation for navigation '[<generated>_2].Brand' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-12-26 20:09:31,054 [11] ?     - The Include operation for navigation '[<generated>_2].Section' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-12-26 20:29:33,314 [11] ?     - The Include operation for navigation '[<generated>_2].Brand' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-12-26 20:29:33,335 [11] ?     - The Include operation for navigation '[<generated>_2].Section' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-12-26 20:29:37,649 [9] ?     - The Include operation for navigation '[<generated>_2].Brand' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-12-26 20:29:37,653 [9] ?     - The Include operation for navigation '[<generated>_2].Section' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-12-26 20:40:58,871 [17] ?     - The Include operation for navigation '[<generated>_2].Brand' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-12-26 20:40:58,892 [17] ?     - The Include operation for navigation '[<generated>_2].Section' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+

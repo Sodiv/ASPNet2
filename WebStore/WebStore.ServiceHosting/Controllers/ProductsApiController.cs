@@ -52,5 +52,17 @@ namespace WebStore.ServiceHosting.Controllers
             var count = _productData.GetBrandProductCount(brandId);
             return count;
         }
+
+        [HttpGet("sections/{id}")]
+        public Section GetSectionById(int id)
+        {
+            return _productData.GetSectionById(id);
+        }
+
+        [HttpGet("brands/{id}")]
+        public Brand GetBrandById(int id)
+        {
+            return _productData.GetBrandById(id);
+        }
     }
 }

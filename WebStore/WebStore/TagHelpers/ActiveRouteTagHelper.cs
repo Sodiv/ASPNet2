@@ -34,6 +34,8 @@ namespace WebStore.TagHelpers
         {
             base.Process(context, output);
 
+            bool ignoreAction = context.AllAttributes.TryGetAttribute("ignore-action", out _);
+
             if (ShouldBeActive())
             {
                 MakeActive(output);
