@@ -1,0 +1,803 @@
+2018-12-25 22:20:02,147 [23] ?     - One or more errors occurred. (Error converting value 4 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.)
+
+System.AggregateException: One or more errors occurred. (Error converting value 4 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.) ---> Newtonsoft.Json.JsonSerializationException: Error converting value 4 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebStore.Clients.Base.BaseClient.Get[T](String url) in E:\ASPNet2\WebStore\WebStore.Clients\Base\BaseClient.cs:line 29
+   at WebStore.Clients.Services.Products.ProductsClient.GetProductById(Int32 id) in E:\ASPNet2\WebStore\WebStore.Clients\Services\Products\ProductsClient.cs:line 47
+   at WebStore.Controllers.CatalogController.ProductDetails(Int32 id) in E:\ASPNet2\WebStore\WebStore\Controllers\CatalogController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+---> (Inner Exception #0) Newtonsoft.Json.JsonSerializationException: Error converting value 4 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()<---
+
+2018-12-25 22:20:02,717 [23] ?     - An unhandled exception has occurred while executing the request
+
+2018-12-25 22:25:55,278 [10] ?     - One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.)
+
+System.AggregateException: One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.) ---> Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebStore.Clients.Base.BaseClient.Get[T](String url) in E:\ASPNet2\WebStore\WebStore.Clients\Base\BaseClient.cs:line 29
+   at WebStore.Clients.Services.Products.ProductsClient.GetProductById(Int32 id) in E:\ASPNet2\WebStore\WebStore.Clients\Services\Products\ProductsClient.cs:line 47
+   at WebStore.Controllers.CatalogController.ProductDetails(Int32 id) in E:\ASPNet2\WebStore\WebStore\Controllers\CatalogController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+---> (Inner Exception #0) Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()<---
+
+2018-12-25 22:25:55,481 [10] ?     - An unhandled exception has occurred while executing the request
+
+2018-12-25 22:46:28,245 [24] ?     - One or more errors occurred. (Error converting value 4 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.)
+
+System.AggregateException: One or more errors occurred. (Error converting value 4 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.) ---> Newtonsoft.Json.JsonSerializationException: Error converting value 4 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebStore.Clients.Base.BaseClient.Get[T](String url) in E:\ASPNet2\WebStore\WebStore.Clients\Base\BaseClient.cs:line 29
+   at WebStore.Clients.Services.Products.ProductsClient.GetProductById(Int32 id) in E:\ASPNet2\WebStore\WebStore.Clients\Services\Products\ProductsClient.cs:line 47
+   at WebStore.Controllers.CatalogController.ProductDetails(Int32 id) in E:\ASPNet2\WebStore\WebStore\Controllers\CatalogController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+---> (Inner Exception #0) Newtonsoft.Json.JsonSerializationException: Error converting value 4 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()<---
+
+2018-12-25 22:46:28,465 [24] ?     - An unhandled exception has occurred while executing the request
+
+2018-12-25 22:58:04,491 [8] ?     - One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.)
+
+System.AggregateException: One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.) ---> Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebStore.Clients.Base.BaseClient.Get[T](String url) in E:\ASPNet2\WebStore\WebStore.Clients\Base\BaseClient.cs:line 29
+   at WebStore.Clients.Services.Products.ProductsClient.GetProductById(Int32 id) in E:\ASPNet2\WebStore\WebStore.Clients\Services\Products\ProductsClient.cs:line 47
+   at WebStore.Controllers.CatalogController.ProductDetails(Int32 id) in E:\ASPNet2\WebStore\WebStore\Controllers\CatalogController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+---> (Inner Exception #0) Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()<---
+
+2018-12-25 22:58:04,706 [8] ?     - An unhandled exception has occurred while executing the request
+
+2018-12-25 22:58:30,154 [9] ?     - One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.)
+
+System.AggregateException: One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.) ---> Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebStore.Clients.Base.BaseClient.Get[T](String url) in E:\ASPNet2\WebStore\WebStore.Clients\Base\BaseClient.cs:line 29
+   at WebStore.Clients.Services.Products.ProductsClient.GetProductById(Int32 id) in E:\ASPNet2\WebStore\WebStore.Clients\Services\Products\ProductsClient.cs:line 47
+   at WebStore.Controllers.CatalogController.ProductDetails(Int32 id) in E:\ASPNet2\WebStore\WebStore\Controllers\CatalogController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+---> (Inner Exception #0) Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()<---
+
+2018-12-25 22:58:30,293 [9] ?     - An unhandled exception has occurred while executing the request
+
+2018-12-25 22:59:36,742 [9] ?     - One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.)
+
+System.AggregateException: One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.) ---> Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebStore.Clients.Base.BaseClient.Get[T](String url) in E:\ASPNet2\WebStore\WebStore.Clients\Base\BaseClient.cs:line 29
+   at WebStore.Clients.Services.Products.ProductsClient.GetProductById(Int32 id) in E:\ASPNet2\WebStore\WebStore.Clients\Services\Products\ProductsClient.cs:line 47
+   at WebStore.Controllers.CatalogController.ProductDetails(Int32 id) in E:\ASPNet2\WebStore\WebStore\Controllers\CatalogController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+---> (Inner Exception #0) Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()<---
+
+2018-12-25 22:59:36,900 [9] ?     - An unhandled exception has occurred while executing the request
+
+2018-12-25 22:59:57,357 [25] ?     - One or more errors occurred. (Error converting value 4 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.)
+
+System.AggregateException: One or more errors occurred. (Error converting value 4 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.) ---> Newtonsoft.Json.JsonSerializationException: Error converting value 4 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebStore.Clients.Base.BaseClient.Get[T](String url) in E:\ASPNet2\WebStore\WebStore.Clients\Base\BaseClient.cs:line 29
+   at WebStore.Clients.Services.Products.ProductsClient.GetProductById(Int32 id) in E:\ASPNet2\WebStore\WebStore.Clients\Services\Products\ProductsClient.cs:line 47
+   at WebStore.Controllers.CatalogController.ProductDetails(Int32 id) in E:\ASPNet2\WebStore\WebStore\Controllers\CatalogController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+---> (Inner Exception #0) Newtonsoft.Json.JsonSerializationException: Error converting value 4 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()<---
+
+2018-12-25 22:59:57,499 [25] ?     - An unhandled exception has occurred while executing the request
+
+2018-12-25 23:06:20,641 [21] ?     - One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.)
+
+System.AggregateException: One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.) ---> Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebStore.Clients.Base.BaseClient.Get[T](String url) in E:\ASPNet2\WebStore\WebStore.Clients\Base\BaseClient.cs:line 29
+   at WebStore.Clients.Services.Products.ProductsClient.GetProductById(Int32 id) in E:\ASPNet2\WebStore\WebStore.Clients\Services\Products\ProductsClient.cs:line 47
+   at WebStore.Controllers.CatalogController.ProductDetails(Int32 id) in E:\ASPNet2\WebStore\WebStore\Controllers\CatalogController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+---> (Inner Exception #0) Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()<---
+
+2018-12-25 23:06:20,848 [21] ?     - An unhandled exception has occurred while executing the request
+
+2018-12-25 23:09:15,950 [11] ?     - One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.)
+
+System.AggregateException: One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.) ---> Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebStore.Clients.Base.BaseClient.Get[T](String url) in E:\ASPNet2\WebStore\WebStore.Clients\Base\BaseClient.cs:line 29
+   at WebStore.Clients.Services.Products.ProductsClient.GetProductById(Int32 id) in E:\ASPNet2\WebStore\WebStore.Clients\Services\Products\ProductsClient.cs:line 47
+   at WebStore.Controllers.CatalogController.ProductDetails(Int32 id) in E:\ASPNet2\WebStore\WebStore\Controllers\CatalogController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+---> (Inner Exception #0) Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()<---
+
+2018-12-25 23:09:16,020 [11] ?     - An unhandled exception has occurred while executing the request
+
+2018-12-25 23:14:10,521 [20] ?     - One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.)
+
+System.AggregateException: One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.) ---> Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebStore.Clients.Base.BaseClient.Get[T](String url) in E:\ASPNet2\WebStore\WebStore.Clients\Base\BaseClient.cs:line 29
+   at WebStore.Clients.Services.Products.ProductsClient.GetProductById(Int32 id) in E:\ASPNet2\WebStore\WebStore.Clients\Services\Products\ProductsClient.cs:line 47
+   at WebStore.Controllers.CatalogController.ProductDetails(Int32 id) in E:\ASPNet2\WebStore\WebStore\Controllers\CatalogController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+---> (Inner Exception #0) Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()<---
+
+2018-12-25 23:14:14,154 [20] ?     - An unhandled exception has occurred while executing the request
+
+2018-12-25 23:21:27,860 [8] ?     - One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.)
+
+System.AggregateException: One or more errors occurred. (Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1.) ---> Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebStore.Clients.Base.BaseClient.Get[T](String url) in E:\ASPNet2\WebStore\WebStore.Clients\Base\BaseClient.cs:line 29
+   at WebStore.Clients.Services.Products.ProductsClient.GetProductById(Int32 id) in E:\ASPNet2\WebStore\WebStore.Clients\Services\Products\ProductsClient.cs:line 47
+   at WebStore.Controllers.CatalogController.ProductDetails(Int32 id) in E:\ASPNet2\WebStore\WebStore\Controllers\CatalogController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WebStore.Middleware.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext() in E:\ASPNet2\WebStore\WebStore\Middleware\ErrorHandlingMiddleware.cs:line 23
+---> (Inner Exception #0) Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'WebStore.Domain.Dto.ProductDto'. Path '', line 1, position 1. ---> System.ArgumentException: Could not cast or convert from System.Int64 to WebStore.Domain.Dto.ProductDto.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 616
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType) in /_/Src/Newtonsoft.Json/Utilities/ConvertUtils.cs:line 587
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 982
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 989
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalReader.cs:line 196
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 907
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()<---
+
+2018-12-25 23:21:30,877 [8] ?     - An unhandled exception has occurred while executing the request
+

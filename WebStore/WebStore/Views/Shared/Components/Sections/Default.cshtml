@@ -1,9 +1,10 @@
-﻿@model IEnumerable<SectionViewModel>
+﻿@using  WebStore.Domain.ViewModel
+@model SectionCompleteViewModel
 
 <h2>Категории</h2>
 <div class="panel-group category-products" id="accordian">
     <!--category-products-->
-    @foreach (var parentSection in Model)
+    @foreach (var parentSection in Model.Sections)
     {
         if (parentSection.ChildSections.Count > 0)
         {

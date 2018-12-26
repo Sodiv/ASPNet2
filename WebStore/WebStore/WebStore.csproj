@@ -5,19 +5,41 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+    <Compile Remove="Infrastuctures\**" />
+    <Compile Remove="Models\**" />
+    <Content Remove="Infrastuctures\**" />
+    <Content Remove="Models\**" />
+    <EmbeddedResource Remove="Infrastuctures\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Infrastuctures\**" />
+    <None Remove="Models\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WebStore.DAL\WebStore.DAL.csproj" />
+    <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+    <PackageReference Include="SimpleMvcSitemap" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebStore.Clients\WebStore.Clients.csproj" />
     <ProjectReference Include="..\WebStore.Domain\WebStore.Domain.csproj" />
+    <ProjectReference Include="..\WebStore.Interfaces\WebStore.Interfaces.csproj" />
+    <ProjectReference Include="..\WebStore.Logger\WebStore.Logger.csproj" />
+    <ProjectReference Include="..\WebStore.Services\WebStore.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

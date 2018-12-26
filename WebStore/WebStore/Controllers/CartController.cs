@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using WebStore.Domain.Dto.Order;
+using WebStore.Domain.ViewModel.Order;
 using WebStore.Infrastuctures.Interfaces;
-using WebStore.Models.Order;
 
 namespace WebStore.Controllers
 {
@@ -32,13 +29,13 @@ namespace WebStore.Controllers
         public IActionResult DecrementFromCart(int id)
         {
             _cartService.DecrementFromCart(id);
-            return RedirectToAction("Details");
+            return Json(new { id, message = "Количестов товара уменьшено на 1" });
         }
 
         public IActionResult RemoveFromCart(int id)
         {
             _cartService.RemoveFromCart(id);
-            return RedirectToAction("Details");
+            return Json(new { id, message = "Товар удален из корзины" });
         }
 
         public IActionResult RemoveAll()
@@ -50,11 +47,7 @@ namespace WebStore.Controllers
         public IActionResult AddToCart(int id, string returnUrl)
         {
             _cartService.AddToCart(id);
-
-            if (Url.IsLocalUrl(returnUrl))
-                return Redirect(returnUrl);
-
-            return RedirectToAction("Index", "Home");
+            return Json(new { id, message = "Товар добавлен в корзину" });
         }
 
         [HttpPost, ValidateAntiForgeryToken]
@@ -62,8 +55,7 @@ namespace WebStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                var orderResult = _ordersService.CreateOrder(model, _cartService.TransformCart(),
-                    User.Identity.Name);
+                var orderResult = _ordersService.CreateOrder(new CreateOrderModel(), User.Identity.Name);
                 _cartService.RemoveAll();
                 return RedirectToAction("OrderConfirmed", new { id = orderResult.Id });
             }
@@ -79,6 +71,11 @@ namespace WebStore.Controllers
         {
             ViewBag.OrderId = id;
             return View();
+        }
+
+        public IActionResult GetCartView()
+        {
+            return ViewComponent("Cart");
         }
     }
 }
